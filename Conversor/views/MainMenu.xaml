@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Conversor.views.MainMenu"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <!--La parte azul de las aplicaciones se llama status bar-->
+        <StackLayout BackgroundColor="#FEE6B8">
+            <Label Text="Conversor"
+                   FontSize="35"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,0"
+                   HorizontalOptions="Center"/>
+            <Frame VerticalOptions="FillAndExpand"
+                   Margin="20"
+                   CornerRadius="20"
+                   HasShadow="False"><!-- un frame puede llevar curbatura, de algun modo es un ontenedor de un solo elemento (decorador)-->
+                <StackLayout VerticalOptions="Center"
+                             Spacing="20"> <!--Le indica que se espaciado va haber entre todos lo elementos-->
+                    <Image Source="cinta-metrica.png"
+                           HeightRequest="200"/>
+                    <Label Text="(cm) to (m)"
+                           FontAttributes="Bold"
+                           FontSize="30"
+                           HorizontalOptions="Center"/>
+                    <Button x:Name="BtnInitial"
+                            Text="Start"
+                            BackgroundColor="#FEE6B8"
+                            TextTransform="None"
+                            CornerRadius="10"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            Clicked="BtnInitial_Clicked"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

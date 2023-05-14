@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Conversor.views.ConvertM"
+             NavigationPage.HasNavigationBar="False">
+    <Grid BackgroundColor="#FDE07F">
+        <StackLayout VerticalOptions="Center"
+                     Margin="20">
+            <Image Source="mundo.png"
+                   Margin="20"
+                   WidthRequest="500"
+                   HeightRequest="250"
+                   />
+            <Frame CornerRadius="20"
+                   HasShadow="False">
+                <Entry x:Name="TxtCm" 
+                    Keyboard="Numeric"
+                       Placeholder="Centimeters (cm)"
+                       TextColor="Black"
+                       PlaceholderColor="Black"
+                       FontSize="Large"
+                       />
+            </Frame>
+            <Button x:Name="Calculate"
+                    Text="Calculate"
+                    CornerRadius="10"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Margin="0,20,0,0"
+                    TextTransform="None"
+                    BackgroundColor="#7C50E9"
+                    TextColor="White"
+                    Clicked="Calculate_Clicked"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Result: "
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"/>
+                <Label x:Name="LblResult"
+                       Text="0.00"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"/>
+            </StackLayout>
+            <Button x:Name="BtnReturn"
+                    Text="Return"
+                    CornerRadius="10"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Margin="0,20,0,0"
+                    TextTransform="None"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    Clicked="BtnReturn_Clicked"
+                    />
+        </StackLayout>
+    </Grid>
+</ContentPage>
